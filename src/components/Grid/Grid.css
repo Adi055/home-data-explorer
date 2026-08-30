@@ -1,0 +1,120 @@
+.grid {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  border: 1px solid #ddd;
+}
+
+/* Shared by the header and every data row so columns line up. */
+.grid-row {
+  display: grid;
+  grid-template-columns: 110px 170px 130px 100px 120px 80px 80px 80px 70px;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.grid-header {
+  font-weight: 600;
+  background: var(--color-surface);
+  border-bottom: 2px solid #ddd;
+  padding-block: 8px;
+}
+
+.grid-scroll {
+  flex: 1;
+  overflow-y: auto;
+  position: relative;
+}
+
+.grid-row .num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.grid-row .muted {
+  color: #888;
+  font-style: italic;
+}
+
+.group-header {
+  cursor: pointer;
+  background: var(--color-surface);
+  font-weight: 600;
+}
+
+.group-header:hover {
+  filter: brightness(0.97);
+}
+
+.group-label {
+  grid-column: 1 / span 5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.group-header.depth-1 .group-label {
+  padding-left: 24px;
+  font-weight: 500;
+}
+
+.disclosure {
+  display: inline-block;
+  width: 14px;
+}
+
+.sortable-header {
+  cursor: pointer;
+  user-select: none;
+}
+
+.sortable-header:hover {
+  text-decoration: underline;
+}
+
+.calls-cell {
+  cursor: pointer;
+  text-align: right;
+  padding: 1px 6px;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  float: right;
+}
+
+.calls-cell.status-pending {
+  background: var(--state-pending-bg);
+  border-color: var(--state-pending-border);
+  cursor: default;
+}
+
+.calls-cell.status-saved {
+  background: var(--state-saved-bg);
+  border-color: var(--state-saved-border);
+}
+
+.calls-cell.status-rejected {
+  background: var(--state-rejected-bg);
+  border-color: var(--state-rejected-border);
+}
+
+.calls-input {
+  width: 100%;
+  text-align: right;
+  border: 1px solid var(--state-editing-border);
+  background: var(--state-editing-bg);
+  border-radius: var(--radius);
+  padding: 1px 6px;
+  font: inherit;
+}
+
+.spinner {
+  font-size: 11px;
+}

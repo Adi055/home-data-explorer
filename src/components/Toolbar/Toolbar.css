@@ -1,0 +1,42 @@
+.toolbar {
+  display: flex;
+  gap: 8px;
+  padding: 8px 12px;
+  border-bottom: 1px solid #ddd;
+  background: var(--color-background);
+}
+
+.search-input {
+  flex: 1;
+  max-width: 320px;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font: inherit;
+}
+
+.region-select,
+.tenant-select {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font: inherit;
+}
+
+.toolbar-spacer {
+  flex: 1;
+}
+
+.toolbar button {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  cursor: pointer;
+  font: inherit;
+}
+
+.toolbar button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}

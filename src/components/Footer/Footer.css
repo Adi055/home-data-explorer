@@ -1,0 +1,9 @@
+.footer {
+  display: flex;
+  gap: 24px;
+  padding: 6px 12px;
+  font-size: 12px;
+  color: #666;
+  border-top: 1px solid #ddd;
+  background: var(--color-surface);
+}

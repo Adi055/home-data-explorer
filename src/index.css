@@ -1,0 +1,41 @@
+:root {
+  /* Tenant-driven theme values (see src/theme/ThemeProvider.tsx). These
+     defaults match DEFAULT_THEME so the app looks right before the
+     provider's effect runs on first paint. */
+  --color-primary: #0b5fa5;
+  --color-on-primary: #ffffff;
+  --color-background: #ffffff;
+  --color-surface: #f2f5f8;
+  --color-text: #16202e;
+  --radius: 8px;
+
+  /* Edit-state colors are fixed, not derived from the tenant theme, so
+     they stay legible under every tenant palette. */
+  --state-editing-bg: #eaf1fb;
+  --state-editing-border: #0b5fa5;
+  --state-pending-bg: #fff7e0;
+  --state-pending-border: #c98a00;
+  --state-saved-bg: #e8f5ea;
+  --state-saved-border: #2e7d46;
+  --state-rejected-bg: #fdeceb;
+  --state-rejected-border: #c0362c;
+
+  color-scheme: light;
+  font: 14px/1.4 system-ui, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
